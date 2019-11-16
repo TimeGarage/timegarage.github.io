@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://timegarage.works</id>
+    <id>http://www.timegarage.works</id>
     <title>少数派报告</title>
-    <updated>2019-11-16T07:15:03.568Z</updated>
+    <updated>2019-11-16T07:28:54.070Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://timegarage.works"/>
-    <link rel="self" href="http://timegarage.works/atom.xml"/>
+    <link rel="alternate" href="http://www.timegarage.works"/>
+    <link rel="self" href="http://www.timegarage.works/atom.xml"/>
     <subtitle>Minority Report</subtitle>
-    <logo>http://timegarage.works/images/avatar.png</logo>
-    <icon>http://timegarage.works/favicon.ico</icon>
+    <logo>http://www.timegarage.works/images/avatar.png</logo>
+    <icon>http://www.timegarage.works/favicon.ico</icon>
     <rights>All rights reserved 2019, 少数派报告</rights>
     <entry>
         <title type="html"><![CDATA[《百面机器学习》之 特征工程]]></title>
-        <id>http://timegarage.works/post/Note-FeatureEngineering</id>
-        <link href="http://timegarage.works/post/Note-FeatureEngineering">
+        <id>http://www.timegarage.works/post/Note-FeatureEngineering</id>
+        <link href="http://www.timegarage.works/post/Note-FeatureEngineering">
         </link>
         <updated>2019-11-15T14:36:27.000Z</updated>
         <content type="html"><![CDATA[<h1 id="特征工程">特征工程</h1>
