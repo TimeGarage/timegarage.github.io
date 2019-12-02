@@ -468,13 +468,13 @@ a {
   color: #343a40;
 }
 .post-detail .post-content a {
-  color: #4c6ef5;
-  border-bottom: 1px dotted #4c6ef5;
+  color: #0c8599;
+  border-bottom: 1px dotted #0c8599;
   transition: all 0.3s;
 }
 .post-detail .post-content a:hover {
-  color: #3b5bdb;
-  border-bottom: 1px dotted #3b5bdb;
+  color: #0b7285;
+  border-bottom: 1px dotted #0b7285;
 }
 .post-detail .post-content img {
   display: block;
