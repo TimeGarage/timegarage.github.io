@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://timegarage.github.io</id>
     <title>少数派报告</title>
-    <updated>2019-11-18T10:42:48.651Z</updated>
+    <updated>2019-12-02T13:10:59.068Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://timegarage.github.io"/>
     <link rel="self" href="https://timegarage.github.io/atom.xml"/>
@@ -11,7 +11,7 @@
     <icon>https://timegarage.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 少数派报告</rights>
     <entry>
-        <title type="html"><![CDATA[《百面机器学习》之 模型评估]]></title>
+        <title type="html"><![CDATA[模型评估 - 百面机器学习]]></title>
         <id>https://timegarage.github.io/post/Note-ModelEvaluation</id>
         <link href="https://timegarage.github.io/post/Note-ModelEvaluation">
         </link>
@@ -264,7 +264,7 @@
 ]]></content>
     </entry>
     <entry>
-        <title type="html"><![CDATA[《百面机器学习》之 特征工程]]></title>
+        <title type="html"><![CDATA[特征工程 - 百面机器学习]]></title>
         <id>https://timegarage.github.io/post/Note-FeatureEngineering</id>
         <link href="https://timegarage.github.io/post/Note-FeatureEngineering">
         </link>
