@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://timegarage.github.io</id>
     <title>少数派报告</title>
-    <updated>2019-12-05T14:36:57.010Z</updated>
+    <updated>2019-12-06T04:36:05.368Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://timegarage.github.io"/>
     <link rel="self" href="https://timegarage.github.io/atom.xml"/>
@@ -16,7 +16,11 @@
         <link href="https://timegarage.github.io/post/Note-ModelEvaluation">
         </link>
         <updated>2019-11-16T14:13:44.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="模型评估">模型评估</h1>
+        <summary type="html"><![CDATA[<p>模型评估指标与方法</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>模型评估指标与方法</p>
+<!-- more -->
+<h1 id="模型评估">模型评估</h1>
 <h3 id="评估指标的局限性">评估指标的局限性</h3>
 <ul>
 <li>
@@ -269,7 +273,11 @@
         <link href="https://timegarage.github.io/post/Note-FeatureEngineering">
         </link>
         <updated>2019-11-15T14:36:27.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="特征工程">特征工程</h1>
+        <summary type="html"><![CDATA[<p>特征工程的实际应用</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>特征工程的实际应用</p>
+<!-- more -->
+<h1 id="特征工程">特征工程</h1>
 <h3 id="特征归一化">特征归一化</h3>
 <ul>
 <li>目的：消除量纲影响</li>
