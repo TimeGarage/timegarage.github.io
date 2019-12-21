@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.timegarage.works</id>
     <title>少数派报告</title>
-    <updated>2019-12-14T12:58:22.999Z</updated>
+    <updated>2019-12-21T14:08:12.191Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.timegarage.works"/>
     <link rel="self" href="https://www.timegarage.works/atom.xml"/>
-    <subtitle>Minority Report</subtitle>
+    <subtitle>&lt;I&gt;&quot;You can choose.&quot;&lt;/I&gt;</subtitle>
     <logo>https://www.timegarage.works/images/avatar.png</logo>
     <icon>https://www.timegarage.works/favicon.ico</icon>
     <rights>All rights reserved 2019, 少数派报告</rights>
