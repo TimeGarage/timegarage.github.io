@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.timegarage.works</id>
     <title>少数派报告</title>
-    <updated>2020-07-26T16:21:36.358Z</updated>
+    <updated>2020-07-26T16:28:51.562Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.timegarage.works"/>
     <link rel="self" href="https://www.timegarage.works/atom.xml"/>
@@ -16,7 +16,9 @@
         <link href="https://www.timegarage.works/post/JavaScript/">
         </link>
         <updated>2020-07-26T03:20:18.000Z</updated>
-        <content type="html"><![CDATA[<p>本文参考了Mozilla的JavaScript教程，旨在对JavaScript核心知识进行梳理。</p>
+        <summary type="html"><![CDATA[<center>本文参考了Mozilla的JavaScript教程，旨在对JavaScript核心知识进行梳理。</center>]]></summary>
+        <content type="html"><![CDATA[<center>本文参考了Mozilla的JavaScript教程，旨在对JavaScript核心知识进行梳理。</center>
+<!-- more -->
 <h1 id="1-基础概念">1 基础概念</h1>
 <h2 id="11-简介">1.1 简介</h2>
 <p>JavaScript 是一种多范式的动态语言，它包含类型、运算符、标准内置（ built-in）对象和方法。它的语法来源于 Java 和 C，所以这两种语言的许多语法特性同样适用于 JavaScript。JavaScript 通过原型链而不是类来支持面向对象编程。JavaScript同样支持函数式编程——因为它们也是对象，函数也可以被保存在变量中，并且像其他对象一样被传递。</p>
@@ -357,7 +359,9 @@ f();  // 6
         <link href="https://www.timegarage.works/post/LogParsing/">
         </link>
         <updated>2020-07-13T08:27:44.000Z</updated>
-        <content type="html"><![CDATA[<p>前言：最近在网络流量分析项目中需要对日志进行收集和处理，而网络上关于Logstash的资料都比较分散，因此本文对Logstash的架构与用法进行了简单地梳理，帮助初学者快速入门。</p>
+        <summary type="html"><![CDATA[<center>最近在网络流量分析项目中需要对日志进行收集和处理，而网络上关于Logstash的资料都比较分散，因此本文对Logstash的架构与用法进行了简单地梳理，帮助初学者快速入门。</center>]]></summary>
+        <content type="html"><![CDATA[<center>最近在网络流量分析项目中需要对日志进行收集和处理，而网络上关于Logstash的资料都比较分散，因此本文对Logstash的架构与用法进行了简单地梳理，帮助初学者快速入门。</center>
+<!-- more -->
 <h2 id="简介">简介</h2>
 <p>Logstash是开源的服务器端数据处理管道，能够同时从多个来源采集数据，处理数据和转发数据。</p>
 <h2 id="工作流程">工作流程</h2>
