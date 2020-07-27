@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JavaScript核心知识 | 少数派报告</title>
 <meta name="description" content="Minority Report" />
-<link rel="shortcut icon" href="https://www.timegarage.works/favicon.ico?v=1595780831323">
+<link rel="shortcut icon" href="https://www.timegarage.works/favicon.ico?v=1595834234005">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://www.timegarage.works/styles/main.css">
 
@@ -19,7 +19,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://www.timegarage.works">
-  <img class="avatar" src="https://www.timegarage.works/images/avatar.png?v=1595780831323" alt="">
+  <img class="avatar" src="https://www.timegarage.works/images/avatar.png?v=1595834234005" alt="">
   </a>
   <h1 class="site-title">
     少数派报告
@@ -85,7 +85,7 @@
                 2020-07-26
               </span>
               <span>
-                18 min read
+                19 min read
               </span>
               
                 <a href="https://www.timegarage.works/tag/2M4H636eY/" class="post-tag">
@@ -410,7 +410,7 @@ s.fullNameReversed(); // Willison, Simon
 <p>一个<strong>闭包</strong>，就是 一个函数与其被创建时所带有的作用域对象的组合。闭包允许你保存状态——所以，它们可以用来代替对象。</p>
 <h1 id="2-es6特性">2 ES6特性</h1>
 <h2 id="21-箭头函数">2.1 箭头函数</h2>
-<p><strong>箭头函数表达式</strong>的语法比<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/function">函数表达式</a>更简洁，并且没有自己的<code>this</code>，<code>arguments</code>，<code>super</code>或<code>new.target</code>。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
+<p>箭头函数表达式的语法比函数表达式更简洁，并且没有自己的this，arguments，super或new.target。箭头函数表达式更适用于那些本来需要匿名函数的地方，并且它不能用作构造函数。</p>
 <p><b>基础语法</b></p>
 <pre><code class="language-javascript">(param1, param2, …, paramN) =&gt; { statements } 
 (param1, param2, …, paramN) =&gt; expression
@@ -436,6 +436,45 @@ statements }
 let f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
 f();  // 6
 </code></pre>
+<h2 id="22-class">2.2 class</h2>
+<p>类实际上是个“特殊的函数”，就像你能够定义的函数表达式和函数声明一样，类语法有两个组成部分：类表达式和类声明。</p>
+<p>定义一个类的一种方法是使用一个<strong>类声明</strong>。要声明一个类，你可以使用带有<code>class</code>关键字的类名（这里是“Rectangle”）。</p>
+<pre><code class="language-js">class Rectangle {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+}
+</code></pre>
+<p>函数声明和类声明之间的一个重要区别是函数声明会提升，类声明不会。你首先需要声明你的类，然后访问它，否则像下面的代码会抛出一个<code>ReferenceError</code>：</p>
+<pre><code class="language-js">let p = new Rectangle(); // ReferenceError
+class Rectangle {}
+</code></pre>
+<p><code>extends</code>关键字在类声明或类表达式中用于创建一个类作为另一个类的一个子类。</p>
+<pre><code class="language-js">class Animal { 
+  constructor(name) {
+    this.name = name;
+  }
+  
+  speak() {
+    console.log(`${this.name} makes a noise.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name); // 调用超类构造函数并传入name参数
+  }
+
+  speak() {
+    console.log(`${this.name} barks.`);
+  }
+}
+
+var d = new Dog('Mitzie');
+d.speak();// 'Mitzie barks.'
+</code></pre>
+<p>如果子类中定义了构造函数，那么它必须先调用 <code>super()</code> 才能使用 <code>this</code> 。</p>
 
               </div>
               <div class="toc-container">
@@ -464,6 +503,7 @@ f();  // 6
 <li><a href="#2-es6%E7%89%B9%E6%80%A7">2 ES6特性</a>
 <ul>
 <li><a href="#21-%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">2.1 箭头函数</a></li>
+<li><a href="#22-class">2.2 class</a></li>
 </ul>
 </li>
 </ul>
