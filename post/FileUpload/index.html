@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Logstash快速入门 | 少数派报告</title>
+<title>前后端文件上传 | 少数派报告</title>
 <meta name="description" content="Minority Report" />
 <link rel="shortcut icon" href="https://www.timegarage.works/favicon.ico?v=1599803588375">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -78,62 +78,77 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              Logstash快速入门
+              前后端文件上传
             </h2>
             <div class="post-info">
               <span>
-                2020-07-13
+                2020-08-25
               </span>
               <span>
-                3 min read
+                2 min read
               </span>
-              
-                <a href="https://www.timegarage.works/tag/ELK/" class="post-tag">
-                  # ELK
-                </a>
               
             </div>
             
-              <img class="post-feature-image" src="https://www.timegarage.works/post-images/LogParsing.png" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <center>最近在网络流量分析项目中需要对日志进行收集和处理，而网络上关于Logstash的资料都比较分散，因此本文对Logstash的架构与用法进行了简单地梳理，帮助初学者快速入门。</center>
+                <p>本文针对前后端上传文件时的流程和关键点进行梳理。</p>
 <!-- more -->
-<h2 id="简介">简介</h2>
-<p>Logstash是开源的服务器端数据处理管道，能够同时从多个来源采集数据，处理数据和转发数据。</p>
-<h2 id="工作流程">工作流程</h2>
-<p>数据输入 &gt; 数据过滤 &gt; 数据输出</p>
-<h2 id="关键组件">关键组件</h2>
-<p>Logstash使用input，filter，output三个组件分别完成数据采集、处理和转发的工作。</p>
-<p><b>input组件负责采集数据各种格式、大小和来源的数据。</b>input组件能够以连续流式传输的方式，轻松地从日志、指标、Web应用、数据存储以及各种AWS服务采集数据。</p>
-<p><b>filter插件负责动态地转换和解析数据，不受格式或复杂度的影响。</b>Grok插件可以帮助开发者方便地从非结构化数据中解析出结构化数据。</p>
-<p><b>output插件负责转发filter处理过的数据到指定的数据库中。</b>Logstash提供了众多的输出选择，开发者可以将数据发送到指定的地方。例如，可以用elasticsearch插件输出到es ，rediss插件输出到redis，stdout插件标准输出，kafka插件输出到kafka等。</p>
-<p>此外，Logstash具有高度的可扩展性，开发者可以根据自身需要定制插件。</p>
-<h2 id="grok">Grok</h2>
-<p>Grok是Logstash最重要的插件之一，使用正则表达式对数据完成过滤和解析工作。</p>
-<p>参考资料：<a href="https://blog.csdn.net/qq_34021712/article/details/79746413">Logstash Grok插件语法介绍 </a></p>
-<h2 id="filebeat">Filebeat</h2>
-<p>Filebeat是用来替代Logstash Forwarder的下一代Logstash收集器，与Logstash相比更加轻量和高效，它可以很方便地与Logstash或Elasticsearch进行对接。</p>
-<p><b>Filebeat 与 Logstash的联系与区别：</b></p>
-<p><b>联系：</b>Filebeat和Logstash都具有日志收集的功能</p>
-<p><b>区别：</b>Filebeat更轻量，占用资源较Logstash更少。Logstash具备过滤和处理数据的功能，但Filebeat只能采集日志。</p>
-<p>在实际使用中，通常使用Filebeat作为数据收集的工具，接着使用Redis/ Kafka / RabbitMQ等缓存数据，最后将数据输出到Logstash完成数据聚合、处理的工作。</p>
-
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
 <ul>
-<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></li>
-<li><a href="#%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6">关键组件</a></li>
-<li><a href="#grok">Grok</a></li>
-<li><a href="#filebeat">Filebeat</a></li>
+<li>File Info</li>
 </ul>
+<figure data-type="image" tabindex="1"><img src="../images/FileUpload/FileInfo.png" alt="文件信息" loading="lazy"></figure>
+<pre><code class="language-javascript">const express = require(&quot;express&quot;);
+const router = express.Router();
+const multer = require(&quot;multer&quot;);           //1.用来处理enctype=&quot;multipart/form-data&quot; 的请求
+const fs = require(&quot;fs&quot;);
+const path = require(&quot;path&quot;);
+var upload = multer({ dest: 'upload/' });
+
+//通过post传递的数据
+router.post(&quot;/upload&quot;, upload.array('files', 10), (req, res) =&gt; {
+   var files = req.files;
+   var fileInfos = [];
+
+   // 获取文件信息
+   for (let i in files) {
+      var file = files[i];
+      var fileInfo = {};
+			
+      fileInfo.encoding = file.encoding;
+      fileInfo.destination = file.destination;
+      fileInfo.mimetype = file.mimetype;
+      fileInfo.originalname = file.originalname;
+      fileInfo.size = file.size;
+      fileInfo.path = file.path;
+      fileInfos.push(fileInfo);
+
+      fs.renameSync(file.path, file.destination + file.originalname, (err) =&gt; {
+         err ? res.send('上传失败:' + err) : res.send('上传成功');
+      })
+   }
+   res.set({
+      'content-type': 'application/json; charset=utf-8'
+   });
+   res.end(JSON.stringify(fileInfos), 'utf8');
+})
+
+module.exports = router;
+</code></pre>
+<ul>
+<li>
+<p>上传进度条的实现</p>
+<p>XMLHttpRequest</p>
+</li>
+<li>
+<p>分块</p>
+<p>file.slice(start, end)</p>
 </li>
 </ul>
 
+              </div>
+              <div class="toc-container">
+                
               </div>
             </div>
           </article>
