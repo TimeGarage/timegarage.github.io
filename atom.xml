@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.timegarage.works</id>
     <title>少数派报告</title>
-    <updated>2020-09-11T05:53:41.587Z</updated>
+    <updated>2020-09-20T07:54:40.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.timegarage.works"/>
     <link rel="self" href="https://www.timegarage.works/atom.xml"/>
@@ -257,62 +257,6 @@ function App(data) {
   );
 }
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Ant Design Pro 上手指南]]></title>
-        <id>https://www.timegarage.works/post/antd-guidance/</id>
-        <link href="https://www.timegarage.works/post/antd-guidance/">
-        </link>
-        <updated>2020-09-02T10:41:29.000Z</updated>
-        <summary type="html"><![CDATA[<center>本文站在前端开发小白的角度，对Ant Design Pro的设计和使用进行解读。</center>]]></summary>
-        <content type="html"><![CDATA[<center>本文站在前端开发小白的角度，对Ant Design Pro的设计和使用进行解读。</center>
-<!-- more -->
-<h1 id="0-预备知识">0 预备知识</h1>
-<p>本文假设读者能够熟练运用 HTML / CSS / JS 编写简单的交互式网页，同时对React或Vue有着基本的了解。对于在以上预备知识有所欠缺或遗忘的读者，下面提供了相应的官方文档供参考。</p>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Learn">MDN前端开发入门文档</a></p>
-<p><a href="https://react.docschina.org/docs/getting-started.html">React官方文档</a></p>
-<p>实际上MDN和前端框架的官方文档永远是前端开发者的好伙伴，既可以帮助初学者快速入门，也可以  帮助熟练后的开发者深入了解技术细节。</p>
-<h1 id="1-ant-design-pro-是什么">1 Ant Design Pro 是什么</h1>
-<blockquote>
-<p>Ant Design Pro 是一个企业级中后台前端/设计解决方案，我们秉承 <a href="http://ant.design/">Ant Design</a> 的设计价值观，致力于在设计规范和基础组件的基础上，继续向上构建，提炼出典型模板/业务组件/配套设计资源，进一步提升企业级中后台产品设计研发过程中的『用户』和『设计者』的体验。随着『设计者』的不断反馈，我们将持续迭代，逐步沉淀和总结出更多设计模式和相应的代码实现，阐述中后台产品模板/组件/业务场景的最佳实践，也十分期待你的参与和共建。</p>
-</blockquote>
-<p>以上是蚂蚁官方对Ant Design Pro的释义。从我的角度来看，Ant Design Pro = Ant Design + React脚手架。对于不熟悉Ant Design的同学来说，可以将其理解为一套面向企业级中后台产品的React UI组件库，常被缩写为antd。那什么是脚手架呢？熟悉React的同学可能立刻想到了create-react-app这个工具，实际上，脚手架最大的作用就是帮助开发者快速搭建一套完整的前端开发项目结构，避免了繁琐的项目配置、模块安装工作。使用Ant Design Pro，开发者可以快速搭建如下图所示的项目结构。</p>
-<pre><code class="language-bash">├── config                   # umi 配置，包含路由，构建等配置
-├── mock                     # 本地模拟数据
-├── public
-│   └── favicon.png          # Favicon
-├── src
-│   ├── assets               # 本地静态资源
-│   ├── components           # 业务通用组件
-│   ├── e2e                  # 集成测试用例
-│   ├── layouts              # 通用布局
-│   ├── models               # 全局 dva model
-│   ├── pages                # 业务页面入口和常用模板
-│   ├── services             # 后台接口服务
-│   ├── utils                # 工具库
-│   ├── locales              # 国际化资源
-│   ├── global.less          # 全局样式
-│   └── global.ts            # 全局 JS
-├── tests                    # 测试工具
-├── README.md
-└── package.json
-</code></pre>
-<p>在前端开发的过程中，统一项目使用的编程语言、前端框架等能够更好地提高团队开发和协作的效率。”一致性“贯穿了Ant Design Pro的设计思想，作者对开发者使用的编程语言（如TypeScript、JavaScript）、状态管理工具（如Dva、Redux）乃至目录结构做了统一规定。</p>
-<h2 id="2-核心概念">2 核心概念</h2>
-<p>想要掌握Ant Design Pro的使用方法，就必须熟悉其核心概念及其应用方式。</p>
-<h3 id="21-pro-layout组件">2.1 Pro-Layout组件</h3>
-<p>Ant Design Pro默认使用了Pro-Layout组件来对页面进行布局，提供了多种自定义属性满足开发者的个性化需求。</p>
-<p>Ant Design Pro官方文档对Pro-Layout组件的解释如下。</p>
-<blockquote>
-<p><a href="https://prolayout.ant.design/">Pro-Layout</a> 组件是 Pro v4 中新增的组件，与一般的组件不同，它非常重型，在其中集成了菜单，布局，页头，面包屑，设置抽屉等多种功能。</p>
-</blockquote>
-<p>实际上，在实际用过程中，可以将Pro-Layout组件视作特殊情况的React组件。与普通组件的不同是，Pro-Layout组件与路由相关联，开发者需要在config/config.ts文件中完成相应的配置。此外，Pro-Layout提供了足够的api来支持嵌套布局。</p>
-<p>Ant Design Pro默认提供了两种布局模版：基础布局 - BasicLayout 和 账户信息布局 - UserLayout。</p>
-<h3 id="22-路由">2.2 路由</h3>
-<p>在React框架中，路由是一个决定网页应用跳转逻辑的关键概念。Ant Design Pro为了方便开发者方便的管理路由，使用了中心化的方式在config.ts文件中统一配置和管理。</p>
-<p>Ant Design Pro支持使用路由配置来生成菜单，菜单项名称、嵌套路径和路由高度耦合。开发者只需要在src/layouts/BasicLayout.tsx中设置menuRender属性即可。除此之外，Ant Design Pro支持开发者设置从服务器请求菜单，但需要遵循规定的menuData格式。</p>
-<p>Ant Design Pro使用了Umi作为前端路由框架，同时支持配置式路由和约定式路由，能够满足复杂的业务需求。</p>
 ]]></content>
     </entry>
     <entry>
