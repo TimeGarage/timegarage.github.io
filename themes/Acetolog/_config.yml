@@ -31,27 +31,20 @@ disqus:
 
 contact:
   enable: true
-  description: 'Email: 82610725@163.com'
-
-  twitter:
-    enable: false
-    username: twitter_username
+  email: '82610725@163.com'
+  wechat: TimeGarage
 
   github:
     enable: true
     username: TimeGarage
 
-  weibo:
+  linkedin:
     enable: false
-    username: weibo_username
-
-  facebook:
+    username: dustinpeng
+  
+  zhihu:
     enable: false
-    username: facebook_username
-
-  instagram:
-    enable: false
-    username: instagram_username
+    username: brexit
 
 
 # Analytice

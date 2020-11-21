@@ -15,58 +15,25 @@
         <div class="al_sidebar_author_cnt">
 
             <div class="al_sidebar_author_info">
-                <h4>About Me</h4>
-                
-                <p>{{ config.description }}</p>
+                <h4>自我介绍</h4>
+                <p>你好，我是彭俊，一名热爱数据分析与软件开发的学生，致力于运用科学技术提升人们的生活体验。</p>
+                <p>我现在是北京大学计算机专业的硕士研究生，同时也在西门子中国研究院从事Web开发的工作。</p>
+                <p>在闲暇时光，我喜欢带着相机去旅行，走过大街小巷，感受生活的气息。</p>
+                <p>如果你想和我讨论Web开发或是摄影方面的问题，欢迎随时与我联系。</p>
             </div>
 
             {% if theme.contact.enable === true %}
                 <div class="al_sidebar_contact_info">
-                    <h4>GET IN TOUCH</h4>
-                    <p>{{ theme.contact.description }}</p>
+                    <h4>联系方式</h4>
+                    <p>电子邮箱: {{ theme.contact.email }}</p>
+                    <p>微信: {{ theme.contact.wechat }}</p>
 
                     <div class="dis_flex al_sidebar_social_widget">
-                        {# Facebook widget #}
-                        {% if theme.contact.facebook.enable === true %}
-                            <div class="al_social_icon_cnt" data_link="https://www.facebook.com/{{ theme.contact.facebook.username }}">
-                                <svg class="al_social_icon" id="facebook">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_facebook"></use>
-                                </svg>
-                            </div>
-                        {% endif %}
-
-                        {# instagram widget #}
-                        {% if theme.contact.instagram.enable === true %}
-                            <div class="al_social_icon_cnt" data_link="https://www.instagram.com/{{ theme.contact.instagram.username }}">
-                                <svg class="al_social_icon" id="instagram">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_instagram"></use>
-                                </svg>
-                            </div>
-                        {% endif %}
-
-                        {# weibo widget #}
-                        {% if theme.contact.weibo.enable === true %}
-                            <div class="al_social_icon_cnt" data_link="https://weibo.com/{{ theme.contact.weibo.username }}/">
-                                <svg class="al_social_icon" id="weibo">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_weibo"></use>
-                                </svg>
-                            </div>
-                        {% endif %}
-
                         {# github widget #}
                         {% if theme.contact.github.enable === true %}
                             <div class="al_social_icon_cnt" data_link="https://www.github.com/{{ theme.contact.github.username }}">
                                 <svg class="al_social_icon" id="github">
                                     <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_github"></use>
-                                </svg>
-                            </div>
-                        {% endif %}
-
-                        {# twitter widget #}
-                        {% if theme.contact.twitter.enable === true %}
-                            <div class="al_social_icon_cnt" data_link="https://www.twitter.com/{{ theme.contact.twitter.username }}/">
-                                <svg class="al_social_icon" id="twitter">
-                                    <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#icon_twitter"></use>
                                 </svg>
                             </div>
                         {% endif %}
