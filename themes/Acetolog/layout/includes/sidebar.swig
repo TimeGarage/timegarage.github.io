@@ -15,8 +15,8 @@
         <div class="al_sidebar_author_cnt">
 
             <div class="al_sidebar_author_info">
-                <h4>{{ config.author }}</h4>
-                <img class="al_sidebar_avatar" src="{{ config.avatar || theme.avatar || '' }}">
+                <h4>About Me</h4>
+                
                 <p>{{ config.description }}</p>
             </div>
 
