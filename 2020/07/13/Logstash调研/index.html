@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hello World</title>
+        <title>Logstash调研</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2.0">
 <link rel="stylesheet", href="/./css/style.css">
@@ -101,11 +101,11 @@
             <article class="al_article">
                 <header>
                     <h1 class="al_page_title">
-                        Hello World
+                        Logstash调研
                     </h1>
                     <div class="al_page_info dis_flex">
                         <div class="al_page_content_info">
-                            November 21, 2020 0:11 PM
+                            July 13, 2020 08:07 AM
                         </div>
 
                         
@@ -117,25 +117,30 @@
 
                 
                     <div class="al_page_content_outline">
-                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E7%BB%84%E4%BB%B6"><span class="toc-text">关键组件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Grok"><span class="toc-text">Grok</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Filebeat"><span class="toc-text">Filebeat</span></a></li></ol>
                     </div>
                 
 
                 
                 <section id="post-body">
-                    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                    <p>最近在网络流量分析项目中需要对日志进行收集和处理，而网络上关于Logstash的资料都比较分散，因此本文对Logstash的架构与用法进行了简单地梳理，帮助初学者快速入门。</p>
+<a id="more"></a>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Logstash是开源的服务器端数据处理管道，能够同时从多个来源采集数据，处理数据和转发数据。</p>
+<h2 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h2><p>数据输入 &gt; 数据过滤 &gt; 数据输出</p>
+<h2 id="关键组件"><a href="#关键组件" class="headerlink" title="关键组件"></a>关键组件</h2><p>Logstash使用input，filter，output三个组件分别完成数据采集、处理和转发的工作。</p>
+<p><b>input组件负责采集数据各种格式、大小和来源的数据。</b>input组件能够以连续流式传输的方式，轻松地从日志、指标、Web应用、数据存储以及各种AWS服务采集数据。</p>
+<p><b>filter插件负责动态地转换和解析数据，不受格式或复杂度的影响。</b>Grok插件可以帮助开发者方便地从非结构化数据中解析出结构化数据。</p>
+<p><b>output插件负责转发filter处理过的数据到指定的数据库中。</b>Logstash提供了众多的输出选择，开发者可以将数据发送到指定的地方。例如，可以用elasticsearch插件输出到es ，rediss插件输出到redis，stdout插件标准输出，kafka插件输出到kafka等。</p>
+<p>此外，Logstash具有高度的可扩展性，开发者可以根据自身需要定制插件。</p>
+<h2 id="Grok"><a href="#Grok" class="headerlink" title="Grok"></a>Grok</h2><p>Grok是Logstash最重要的插件之一，使用正则表达式对数据完成过滤和解析工作。</p>
+<p>参考资料：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34021712/article/details/79746413">Logstash Grok插件语法介绍 </a></p>
+<h2 id="Filebeat"><a href="#Filebeat" class="headerlink" title="Filebeat"></a>Filebeat</h2><p>Filebeat是用来替代Logstash Forwarder的下一代Logstash收集器，与Logstash相比更加轻量和高效，它可以很方便地与Logstash或Elasticsearch进行对接。</p>
+<p><b>Filebeat 与 Logstash的联系与区别：</b></p>
+<p><b>联系：</b>Filebeat和Logstash都具有日志收集的功能</p>
+<p><b>区别：</b>Filebeat更轻量，占用资源较Logstash更少。Logstash具备过滤和处理数据的功能，但Filebeat只能采集日志。</p>
+<p>在实际使用中，通常使用Filebeat作为数据收集的工具，接着使用Redis/ Kafka / RabbitMQ等缓存数据，最后将数据输出到Logstash完成数据聚合、处理的工作。</p>
 
                 </section>
 
@@ -150,7 +155,7 @@
             repo: "Gitalk",
             owner: "TimeGarage",
             admin: "TimeGarage",
-            id: "Hello World",
+            id: "Logstash调研",
         });
         gitalk.render("al_gitalk_cnt")
     </script>
@@ -159,7 +164,12 @@
 
             
             <nav class="dis_flex al_post_nav">
-                <a class="al_post_nav_item dis_flex_acenter" href="/">
+                <a class="al_post_nav_item dis_flex_acenter" href="/2020/09/11/React%E7%9A%84%E8%AE%BE%E8%AE%A1%E5%93%B2%E5%AD%A6/">
+                    
+                        <svg class="al_arrow">
+                            <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
+                        </svg>
+                        <span class="al_text_ellipsis al_post_nav_desc">React的设计哲学</span>
                     
                 </a>
                 <a class="al_post_nav_item dis_flex_acenter" href="/">
@@ -178,15 +188,8 @@
     
     
 
-    <div class="al_index_footer_item al_index_footer_extra">
-        Created By 
-        <a target="_blank" rel="noopener" href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
-         · Power By 
-        <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>
-    </div>
-
     <div class="al_index_footer_item al_index_footer_extra_right">
-        All Right Reserved
+        Copyright © 2020
     </div>
 </div>
 

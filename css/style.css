@@ -255,14 +255,14 @@ em {
 .al_index_pageList_item {
   position: relative;
   list-style-type: none;
-  padding: 80px 20px;
+  padding: 80px 100px;
 }
 .al_index_post_title_cnt {
   flex-direction: column;
 }
 .al_index_post_title_letter {
-  left: -34px;
-  line-height: 190px;
+  left: 50px;
+  line-height: 160px;
   top: 30px;
 }
 .al_index_post_title {
@@ -364,7 +364,7 @@ em {
   cursor: zoom-in;
 }
 .al_main_page_container a {
-  color: #31716d;
+  color: #32b16c;
 }
 .al_main_page_container q,
 .al_main_page_container blockquote {
@@ -490,7 +490,7 @@ blockquote {
   display: block;
   margin-left: -1em;
   padding-left: 0.8em;
-  border-left: 0.2em solid #e06e73;
+  border-left: 0.2em solid #00736d;
 }
 .arrow svg #rod {
   stroke: #545454;
