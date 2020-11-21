@@ -173,7 +173,7 @@ em {
 @charset "UTF-8";
 .al_fake_background {
   background-color: #f8f8f8;
-  top: 100px;
+  top: 90px;
   width: 100%;
   bottom: 0;
 }
@@ -181,7 +181,7 @@ em {
   position: relative;
   background-color: #fff;
   color: #444;
-  padding: 100px 30px;
+  padding: 60px 30px;
 }
 .al_post_nav {
   justify-content: space-between;
@@ -222,7 +222,7 @@ em {
 }
 @media screen and (min-width: 1200px) {
   .al_main_container {
-    padding: 100px 50px;
+    padding: 60px 50px;
     max-width: 1000px;
     margin: 0 auto;
   }
