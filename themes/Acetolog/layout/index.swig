@@ -51,10 +51,10 @@
                         </div>
                         <div class="al_index_post_button_cnt dis_flex">
                             <a class="al_button al_button_theme al_index_post_button" href="{{ item.link || item.path }}">
-                                READ ON
+                                立即阅读
                             </a>
                             <a class="al_button al_button_transparent al_index_post_button" href="//getpocket.com/edit?url={{ config.url + '/' + postURL }}">
-                                READ LATER
+                                稍后阅读
                             </a>
                         </div>
                     </li>
