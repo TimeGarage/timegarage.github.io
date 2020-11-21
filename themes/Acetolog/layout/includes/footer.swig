@@ -10,14 +10,7 @@
         </div>
     {% endif %}
 
-    <div class="al_index_footer_item al_index_footer_extra">
-        Created By 
-        <a href="https://github.com/iGuan7u/Acetolog">AcetoLog</a>
-         · Power By 
-        <a href="https://hexo.io/">Hexo</a>
-    </div>
-
     <div class="al_index_footer_item al_index_footer_extra_right">
-        All Right Reserved
+        Copyright © 2020
     </div>
 </div>
