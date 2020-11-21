@@ -617,6 +617,7 @@ ol li::before {
 .al_sidebar_author_cnt {
   height: calc(100% - 80px);
   padding: 50px;
+  overflow: scroll;
 }
 .al_sidebar_author_cnt h4 {
   font-size: 24px;
