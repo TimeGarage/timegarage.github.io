@@ -128,13 +128,40 @@ em {
   color: #fff;
   padding: 0 15px;
 }
+@media screen and (max-width: 500px) {
+  .al_header_nav_bar {
+    display: none;
+  }
+}
+@media screen and (min-width: 501px) {
+  .al_header_nav_bar {
+    display: flex;
+  }
+}
 .al_header_setting {
-  width: 38px;
+  width: 46px;
   height: 38px;
-  padding: 10px 12px;
+  padding: 10px 16px;
+  margin-left: 10px;
 }
 .al_header_setting:hover {
   background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+.al_header_menu {
+  text-align: center;
+  height: 40px;
+  margin-right: 3px;
+}
+.al_header_menu:hover {
+  background-color: rgba(255,255,255,0.1);
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.15);
+}
+.al_header_menu_item {
+  font-size: 13px;
+  line-height: 40px;
+  height: 40px;
 }
 .al_header_icon {
   width: 14px;
