@@ -149,7 +149,7 @@ em {
 }
 .al_index_background_letter {
   font-size: 600px;
-  height: 770px;
+  height: 760px;
   z-index: 11;
   cursor: default;
 }
@@ -173,7 +173,7 @@ em {
 @charset "UTF-8";
 .al_fake_background {
   background-color: #f8f8f8;
-  top: 90px;
+  top: 65px;
   width: 100%;
   bottom: 0;
 }
@@ -339,7 +339,7 @@ em {
     height: 25px;
   }
   .al_index_pageList_item {
-    padding: 80px 0;
+    padding: 40px 0;
   }
 }
 .al_page_background {
