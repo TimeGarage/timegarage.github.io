@@ -126,23 +126,23 @@ em {
 }
 .al_header_container a {
   color: #fff;
-  padding: 0 15px;
+  padding: 0 20px;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 545px) {
   .al_header_nav_bar {
     display: none;
   }
 }
-@media screen and (min-width: 541px) {
+@media screen and (min-width: 546px) {
   .al_header_nav_bar {
     display: flex;
   }
 }
 .al_header_setting {
-  width: 46px;
-  height: 38px;
-  padding: 10px 16px;
-  margin-left: 10px;
+  width: 56px;
+  height: 40px;
+  line-height: 42px;
+  text-align: center;
 }
 .al_header_setting:hover {
   transition: all 0.2s ease-in-out;
@@ -637,16 +637,19 @@ ol li::before {
 }
 .al_sidebar_header {
   height: 80px;
-  padding: 0 38px 0 50px;
+  padding: 0 18px 0 50px;
   justify-content: space-between;
 }
 .al_sidebar_header h3 {
   color: #fff;
   font-size: 1.3em;
 }
+.al_sidebar_close {
+  margin-right: 22px;
+}
 .al_sidebar_author_cnt {
   height: calc(100% - 80px);
-  padding: 50px;
+  padding: 40px 50px;
   overflow: scroll;
 }
 .al_sidebar_author_cnt h4 {
@@ -734,6 +737,7 @@ ol li::before {
   .al_main_container,
   .al_sidebar_author_cnt {
     background-color: #232323;
+    color: #aaa;
   }
   .al_index_post_title a {
     color: #bbb;
