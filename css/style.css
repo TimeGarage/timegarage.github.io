@@ -439,7 +439,7 @@ em {
   color: #888;
 }
 .al_page_content_info::after {
-  content: "/";
+  content: "";
   right: -7px;
   position: relative;
 }
