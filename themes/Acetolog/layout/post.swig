@@ -30,12 +30,6 @@
                                 全文共{{ wordcount(page.content) }}字
                             </div>
                         {% endif %}
-
-                        {% if min2read %}
-                            <div class="al_page_content_info">
-                                预计阅读时间{{ min2read(page.content) }}分钟
-                            </div>
-                        {% endif %}
                         <span class="tags"></span>
                     </div>
                 </header>
