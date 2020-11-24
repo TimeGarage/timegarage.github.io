@@ -1,7 +1,7 @@
 ---
 title: 'React的设计哲学'
 date: 2020-09-11 09:43:16
-tags: [前端,React]
+tags: [React]
 ---
 
 转载自文章：https://github.com/react-guide/react-basic
