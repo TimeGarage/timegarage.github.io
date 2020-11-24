@@ -22,18 +22,18 @@
                     </h1>
                     <div class="al_page_info dis_flex">
                         <div class="al_page_content_info">
-                            {{ page.date|date('F d, Y h:m A') }}
+                            {{ page.date|date('Y年m月d日') }}
                         </div>
 
                         {% if wordcount %}
                             <div class="al_page_content_info">
-                                {{ wordcount(page.content) }} words
+                                全文共{{ wordcount(page.content) }}字
                             </div>
                         {% endif %}
 
                         {% if min2read %}
                             <div class="al_page_content_info">
-                                {{ min2read(page.content) }} minutes read
+                                预计阅读时间{{ min2read(page.content) }}分钟
                             </div>
                         {% endif %}
                         <span class="tags"></span>

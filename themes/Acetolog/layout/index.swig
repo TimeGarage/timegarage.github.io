@@ -33,12 +33,12 @@
                             </h2>
                             <div class="al_index_post_extra dis_flex">
                                 <div class="al_index_post_date al_index_post_extra_item">
-                                    {{ item.date|date('F d') }}
+                                    {{ item.date|date('Y年m月d日') }}
                                 </div>
 
                                 {% if min2read %}
                                     <div class="al_index_post_read_time">
-                                        {{ min2read(item.content) }} Min Read
+                                        预计阅读时间{{ min2read(item.content) }}分钟
                                     </div>
                                 {% endif %}
 
