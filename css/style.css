@@ -115,7 +115,7 @@ em {
   display: none;
 }
 .al_header_site_title {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: bold;
 }
 .al_header_container {
@@ -128,12 +128,12 @@ em {
   color: #fff;
   padding: 0 15px;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .al_header_nav_bar {
     display: none;
   }
 }
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 541px) {
   .al_header_nav_bar {
     display: flex;
   }
@@ -145,7 +145,7 @@ em {
   margin-left: 10px;
 }
 .al_header_setting:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-in-out;
   background-color: rgba(255,255,255,0.1);
   cursor: pointer;
 }
@@ -155,7 +155,7 @@ em {
   margin-right: 3px;
 }
 .al_header_menu:hover {
-  transition: all 0.3s ease-out;
+  transition: all 0.2s ease-in-out;
   background-color: rgba(255,255,255,0.1);
 }
 .al_header_menu_item {
@@ -641,7 +641,7 @@ ol li::before {
 }
 .al_sidebar_header h3 {
   color: #fff;
-  font-size: 24px;
+  font-size: 1.3em;
 }
 .al_sidebar_author_cnt {
   height: calc(100% - 80px);
@@ -649,7 +649,7 @@ ol li::before {
   overflow: scroll;
 }
 .al_sidebar_author_cnt h4 {
-  font-size: 24px;
+  font-size: 1.3em;
   margin: 0;
   margin-bottom: 24px;
 }
