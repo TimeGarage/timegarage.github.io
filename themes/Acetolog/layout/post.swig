@@ -4,7 +4,7 @@
     {% if theme.gitalk.enable %}
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     {% endif %}
-    <link rel='stylesheet' href="{{ url_for('./css/dracula.css') }}">
+    <link rel='stylesheet' href="{{ url_for('./css/codestyle.css') }}">
 {% endblock %}
 
 {% block content %}
