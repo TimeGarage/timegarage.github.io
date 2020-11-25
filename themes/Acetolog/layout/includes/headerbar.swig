@@ -12,7 +12,7 @@
                 <a class="al_header_menu_item" href="/">首页</a>
             </div>
             <div class="al_header_menu">
-                <a class="al_header_menu_item" href="/">归档</a>
+                <a class="al_header_menu_item" href="/archives">归档</a>
             </div>
             <div class="al_header_menu">
                 <a class="al_header_menu_item" href="/">标签</a>

@@ -4,7 +4,7 @@
     {% if theme.gitalk.enable %}
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     {% endif %}
-    <link rel='stylesheet' href="{{ url_for('./css/dracula.css') }}">
+    <link rel='stylesheet' href="{{ url_for('./css/codestyle.css') }}">
 {% endblock %}
 
 {% block content %}
@@ -22,18 +22,12 @@
                     </h1>
                     <div class="al_page_info dis_flex">
                         <div class="al_page_content_info">
-                            {{ page.date|date('F d, Y h:m A') }}
+                            {{ page.date|date('Y年m月d日') }}
                         </div>
 
                         {% if wordcount %}
                             <div class="al_page_content_info">
-                                {{ wordcount(page.content) }} words
-                            </div>
-                        {% endif %}
-
-                        {% if min2read %}
-                            <div class="al_page_content_info">
-                                {{ min2read(page.content) }} minutes read
+                                全文共{{ wordcount(page.content) }}字
                             </div>
                         {% endif %}
                         <span class="tags"></span>
