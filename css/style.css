@@ -128,12 +128,12 @@ em {
   color: #fff;
   padding: 0 20px;
 }
-@media screen and (max-width: 545px) {
+@media screen and (max-width: 700px) {
   .al_header_nav_bar {
     display: none;
   }
 }
-@media screen and (min-width: 546px) {
+@media screen and (min-width: 700px) {
   .al_header_nav_bar {
     display: flex;
   }
