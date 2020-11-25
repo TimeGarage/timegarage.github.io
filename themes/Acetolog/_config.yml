@@ -55,8 +55,8 @@ mta_analytics:
   sid: mta_analytics_sid
 
 baidu_analytics:
-  enable: false
-  id: baidu_analytice_id
+  enable: true
+  id: 59a58849119e55e53bb312970497c6a0
 
 google_analytice:
   enable: false
