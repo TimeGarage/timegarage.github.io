@@ -773,3 +773,8 @@ ol li::before {
     box-shadow: 0 0.625em 3.75em 0 #0b0b0b !important;
   }
 }
+.archive_title {
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
