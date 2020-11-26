@@ -10,9 +10,17 @@ description: A beautiful & simple theme.
 # AvatorURL
 # it would be shown on sidecar.
 
-avatar: /assets/LOGO-green.png
+avatar: 
 
 # Comment
+
+gitalk:
+  enable: false
+  clientID: 
+  clientSecret: 
+  repo: Gitalk
+  owner: 
+  admin: 
 
 disqus:
   enable: false
@@ -22,24 +30,28 @@ disqus:
 # Contact info will be shown on the side bar.
 
 contact:
-  enable: true
-  email: '82610725@163.com'
-  wechat: TimeGarage
+  enable: false
+  email: 
+  wechat: 
 
   github:
-    enable: true
-    username: TimeGarage
+    enable: false
+    username: 
 
   linkedin:
     enable: false
-    username: dustinpeng
+    username: 
   
   zhihu:
     enable: false
-    username: brexit
+    username: 
 
 
 # Analytice
+
+baidu_analytics:
+  enable: false
+  id: 
 
 mta_analytics:
   enable: false
@@ -70,3 +82,4 @@ node_sass:
   outputStyle: compressed
   precision: 5
   sourceComments: false
+
