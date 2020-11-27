@@ -67,12 +67,12 @@
                         <svg class="al_arrow">
                             <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-left"></use>
                         </svg>
-                        <span>Newer Posts</span>
+                        <span>开来</span>
                     {% endif %}
                 </a>
                 <a class="al_post_nav_item dis_flex_acenter" href="{{ page.next_link || '/' }}">
                     {% if page.next !== 0 %}
-                        <span>Older Posts</span>
+                        <span>既往</span>
                         <svg class="al_arrow">
                             <use xmlns="http://www.w3.org/2000/svg" xlink:href="/assets/svg_icons.svg#svg-arrow-right"></use>
                         </svg>
