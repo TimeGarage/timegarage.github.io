@@ -14,14 +14,6 @@ avatar: /assets/LOGO-green.png
 
 # Comment
 
-gitalk:
-  enable: true
-  clientID: 447058976c8bd4fe04f6
-  clientSecret: 338d276a77fb63da17761fc5f39458092c228396
-  repo: Gitalk
-  owner: TimeGarage
-  admin: TimeGarage
-
 disqus:
   enable: false
   shortname: your_disqus_short_name
@@ -53,10 +45,6 @@ mta_analytics:
   enable: false
   name: mta_analytics_name
   sid: mta_analytics_sid
-
-baidu_analytics:
-  enable: true
-  id: 59a58849119e55e53bb312970497c6a0
 
 google_analytice:
   enable: false

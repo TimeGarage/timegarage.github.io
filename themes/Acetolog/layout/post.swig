@@ -1,7 +1,7 @@
 {% extends './includes/base.swig' %}
 
 {% block extra_style %}
-    {% if theme.gitalk.enable %}
+    {% if site.data.token.gitalk.enable %}
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
     {% endif %}
     <link rel='stylesheet' href="{{ url_for('./css/codestyle.css') }}">
