@@ -8,6 +8,7 @@
     <div class="al_page_container">
         <div class="al_pos_ab al_fake_background"></div>
         <div class="al_main_container al_shadow al_main_page_container">
+        <article class="al_article">
             <h1 class="archive_title">文章归档</h1>
             <div class="archive_box">
                 <ul>
@@ -26,6 +27,7 @@
                 {% endfor %}
                 </ul>
             </div>
+        </article>
         </div>
     </div>
 
