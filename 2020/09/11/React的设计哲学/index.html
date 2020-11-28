@@ -184,7 +184,6 @@
 <p>现在，这个例子有一点超纲。我会使用 <a target="_blank" rel="noopener" href="http://math.andrej.com/eff/">代数效应</a> 这个由我发起的 <a target="_blank" rel="noopener" href="https://esdiscuss.org/topic/one-shot-delimited-continuations-with-effect-handlers">ECMAScript 新特性提议</a>。如果你对函数式编程很熟悉，它们 在避免由 monad 强制引入的仪式一样的编码。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ThemeBorderColorRequest</span>(<span class="hljs-params"></span>) </span>&#123; &#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">FancyBox</span>(<span class="hljs-params">children</span>) </span>&#123;<br>  <span class="hljs-keyword">const</span> color = raise <span class="hljs-keyword">new</span> ThemeBorderColorRequest();<br>  <span class="hljs-keyword">return</span> &#123;<br>    borderWidth: <span class="hljs-string">&#x27;1px&#x27;</span>,<br>    borderColor: color,<br>    children: children<br>  &#125;;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BlueTheme</span>(<span class="hljs-params">children</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-keyword">try</span> &#123;<br>    children();<br>  &#125; <span class="hljs-keyword">catch</span> effect ThemeBorderColorRequest -&gt; [, continuation] &#123;<br>    continuation(<span class="hljs-string">&#x27;blue&#x27;</span>);<br>  &#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">App</span>(<span class="hljs-params">data</span>) </span>&#123;<br>  <span class="hljs-keyword">return</span> BlueTheme(<br>    FancyUserList.bind(<span class="hljs-literal">null</span>, data.users)<br>  );<br>&#125;<br></code></pre></td></tr></table></figure>
                 </section>
-
                 
                 
     <div id="al_gitalk_cnt">
@@ -202,7 +201,6 @@
     </script>
                 
 
-            </article>
             
             <nav class="dis_flex al_post_nav">
                 <a class="al_post_nav_item dis_flex_acenter" href="/2020/11/24/%E7%BD%91%E9%A1%B5%E5%B8%83%E5%B1%80%E6%BC%94%E8%BF%9B%E5%8F%B2/">
@@ -222,6 +220,7 @@
                     
                 </a>
             </nav>
+            </article>
         </div>
     </div>
 
