@@ -44,11 +44,9 @@
                 <section id="post-body">
                     {{ page.content }}
                 </section>
-
                 {# Comment Plugins #}
                 {% include "./includes/plugins/gitalk.swig" %}
                 {% include "./includes/plugins/disqus.swig" %}
-
             {# Navigate Element #}
             <nav class="dis_flex al_post_nav">
                 <a class="al_post_nav_item dis_flex_acenter" href="{{ url_for(page.prev.path) }}">
@@ -68,6 +66,7 @@
                     {% endif %}
                 </a>
             </nav>
+            </article>
         </div>
     </div>
 

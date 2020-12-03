@@ -1,6 +1,9 @@
 root: /
 
-Home: /
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
 
 language: zh-CN
 

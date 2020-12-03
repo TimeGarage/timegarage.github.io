@@ -9,7 +9,7 @@
         <div class="al_pos_ab al_fake_background"></div>
         <div class="al_main_container al_shadow al_main_page_container">
         <article class="al_article">
-            <h1 class="archive_title">文章归档</h1>
+            <h1 class="archive_title">文章标签</h1>
             <div class="archive_box">
                 <ul>
                 {% for item in page.posts %}
