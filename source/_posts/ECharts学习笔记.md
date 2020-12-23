@@ -12,9 +12,7 @@ tags: [可视化]
 
 <!-- more -->
 
-# ECharts学习笔记
-
-## ECharts使用流程
+## 使用流程
 
 ### 导入ECharts
 
@@ -33,15 +31,17 @@ C --> D(设置展示数据)
 
 ECharts提供了setOption()函数来更新图形，每当该函数被调用时，ECharts会比较前后两次数据的差异，并使用合适的动画来呈现图形的变化。实际上，如果只是创建简单的图形，只需要根据需求修改对应的配置项即可。ECharts所有的配置项可以参考[ECharts文档-配置项](https://echarts.apache.org/zh/option.html#title)。
 
+## 交互逻辑
+
 ### 自定义Toolbox
 
 ECharts自带了toolbox帮助用户实现各种简单的交互逻辑：
 
-- saveAsImage  保存图片
-- restore  配置项还原
-- dataView  数据视图工具
-- dataZoom  数据区域缩放
-- magicType  动态类型切换
+- saveAsImage => 保存图片
+- restore => 配置项还原
+- dataView => 数据视图工具
+- dataZoom => 数据区域缩放
+- magicType => 动态类型切换
 - brush 选择组件的控制按钮
 
 除此之外，用户也可根据自己的需要添加toolbox按钮和对应的click响应事件。需要注意的是，添加到toolbox中的自定义feature均需要以my开头。
@@ -58,9 +58,16 @@ ECharts中的事件主要有两种，一种是鼠标事件（如鼠标单击、�
 
 brush组件是选框组件，适用于用户想要选择一段时间范围的情况。brush组件有三个重要的交互事件，分别是brush、brushEnd和brushselected事件。
 
-- brush  选框正在添加事件
-- brushEnd 选框添加完毕事件
-- brushselected  对外通知当前选择区域事件
+- brush => 选框正在添加事件
+- brushEnd => 选框添加完毕事件
+- brushselected => 对外通知当前选择区域事件
 
 默认情况下，刷选或移动选区时，会不断触发brushSeleted事件，这可能会导致页面性能问题。好在ECharts提供了防抖和节流的配置选项throttleDelay，用户可以根据自身需要设置触发阈值。
 
+#### 行为
+
+除了用户的交互操作，在程序里调用方法触发图表的行为即为action。在ECharts 3中通过调用myChart.dispatchAction({ type: '' })触发图表行为。和brush组件相关的action的使用方法可以参考[ECharts文档-action.brush](https://echarts.apache.org/zh/api.html#action.brush)。
+
+- action.brush.brush => 刷选动作进行中触发，可设置或删除chart中的选框。
+- action.brush.brushEnd => 刷选动作完毕时自动触发该action。
+- action.brush.takeGlobalCursor => 将鼠标变更为可刷选状态。
