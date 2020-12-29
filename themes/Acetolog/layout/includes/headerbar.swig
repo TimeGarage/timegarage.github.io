@@ -17,6 +17,12 @@
             <div class="al_header_menu">
                 <a class="al_header_menu_item" href="https://timegarage.github.io/WebInterview/">面经</a>
             </div>
+            <div class="al_header_menu">
+                <a class="al_header_menu_item" href="https://500px.com.cn/dustinpeng">摄影</a>
+            </div>
+            <div class="al_header_menu">
+                <a class="al_header_menu_item" href="https://www.linkedin.com/in/dustinpeng/">简历</a>
+            </div>
             </div>
             <div class="al_header_setting">
                 <svg class="al_header_icon">
