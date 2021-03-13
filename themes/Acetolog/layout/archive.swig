@@ -20,7 +20,7 @@
                         <li class="archive_li_item">
                             <a class="archive_post_link" 
                             href="{{ url_for(item.link || item.path) }}">
-                            📖 {{ item.title }}
+                            ✲ {{ item.title }}
                             </a>
                             <span>&emsp;{{item.date | date('M, d')}}</span>
                         </li>

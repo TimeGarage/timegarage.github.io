@@ -11,6 +11,6 @@
     {% endif %}
 
     <div class="al_index_footer_item al_index_footer_extra_right">
-        Copyright © 2020
+        Copyright © 2021
     </div>
 </div>
