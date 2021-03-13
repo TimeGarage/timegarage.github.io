@@ -802,15 +802,20 @@ ol li::before {
   margin: 0px;
 }
 .archive_li_year {
+  text-align: center;
   font-size: 42px;
   font-weight: normal;
   color: #31716d;
   margin-top: 40px;
   margin-bottom: 10px;
 }
+ul {
+  padding: 0;
+}
 .archive_li_item {
   margin: 15px 0;
   color: #808080;
+  text-align: center;
 }
 .archive_li_item a {
   color: #808080;
