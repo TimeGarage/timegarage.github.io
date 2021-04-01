@@ -15,6 +15,9 @@
                 <a class="al_header_menu_item" href="/archives">归档</a>
             </div>
             <div class="al_header_menu">
+                <a class="al_header_menu_item" href="https://timegarage.github.io/Just-CSS-it/">CSS</a>
+            </div>
+            <div class="al_header_menu">
                 <a class="al_header_menu_item" href="https://timegarage.github.io/WebInterview/">面经</a>
             </div>
             <div class="al_header_menu">
